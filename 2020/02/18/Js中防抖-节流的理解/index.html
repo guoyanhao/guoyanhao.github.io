@@ -87,7 +87,7 @@
 <meta property="og:description" content="函数防抖（debounce） 事件再被触发n秒后执行回调，如果在等待时间内再次触发事件，则计时从新开始。  123456789function debounce(fun, delay) &amp;#123;  let timer &#x3D; null  return function(args) &amp;#123;    clearTimout(timer)    timer &#x3D; setTimeou">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-18T03:13:54.000Z">
-<meta property="article:modified_time" content="2020-04-03T04:39:31.762Z">
+<meta property="article:modified_time" content="2020-04-03T04:43:05.225Z">
 <meta property="article:author" content="GuoYanHao">
 <meta name="twitter:card" content="summary">
 
@@ -324,6 +324,7 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function debounce(fun, delay) &#123;</span><br><span class="line">  let timer &#x3D; null</span><br><span class="line">  return function(args) &#123;</span><br><span class="line">    clearTimout(timer)</span><br><span class="line">    timer &#x3D; setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">      fun(args)</span><br><span class="line">    &#125;, delay)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 
 <h3 id="函数节流（throttle）"><a href="#函数节流（throttle）" class="headerlink" title="函数节流（throttle）"></a>函数节流（throttle）</h3><blockquote>
 <p>规定在单位时间内，只执行一次函数。如果在单位时间内多次触发函数，也只执行一次。</p>
