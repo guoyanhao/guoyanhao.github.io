@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="web前端,浏览器," />
 
 
 
@@ -79,14 +79,18 @@
 
 
 
+<meta name="description" content="概念及特性localStorage和sessionStorage都是只有现代浏览器支持的HTML5标准的本地存储接口。主要用于键值对形式的数据存储在浏览器中，是客户端持久存储的解决方案。 区别sessionStorage特性与服务端的session类似，表示会话。sessionStoarge只是将数据存储在本次会话中，关闭页面后数据将丢失。localStorage则是用户没有主动调用api删除，则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="guoyanhao">
-<meta property="og:url" content="http://guoyanhao.github.io/2020/03/30/guoyanhao/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-30T13:48:16.000Z">
-<meta property="article:modified_time" content="2020-03-30T13:48:16.905Z">
-<meta property="article:author" content="John Doe">
+<meta property="og:title" content="localStorage和sessionStorage的区别">
+<meta property="og:url" content="http://guoyanhao.github.io/2019/12/29/localStorage%E5%92%8CsessionStorage%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:site_name" content="精卫衔微木，将以填沧海">
+<meta property="og:description" content="概念及特性localStorage和sessionStorage都是只有现代浏览器支持的HTML5标准的本地存储接口。主要用于键值对形式的数据存储在浏览器中，是客户端持久存储的解决方案。 区别sessionStorage特性与服务端的session类似，表示会话。sessionStoarge只是将数据存储在本次会话中，关闭页面后数据将丢失。localStorage则是用户没有主动调用api删除，则">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-29T02:04:01.000Z">
+<meta property="article:modified_time" content="2020-04-03T03:13:06.703Z">
+<meta property="article:author" content="GuoYanHao">
+<meta property="article:tag" content="web前端">
+<meta property="article:tag" content="浏览器">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://guoyanhao.github.io/2020/03/30/guoyanhao/"/>
+  <link rel="canonical" href="http://guoyanhao.github.io/2019/12/29/localStorage和sessionStorage的区别/"/>
 
 
 
 
 
-  <title>guoyanhao | Hexo</title>
+  <title>localStorage和sessionStorage的区别 | 精卫衔微木，将以填沧海</title>
   
 
 
@@ -135,7 +139,7 @@
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -153,7 +157,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">精卫衔微木，将以填沧海</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -179,7 +183,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -188,8 +192,28 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -230,16 +254,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://guoyanhao.github.io/2020/03/30/guoyanhao/">
+    <link itemprop="mainEntityOfPage" href="http://guoyanhao.github.io/2019/12/29/localStorage%E5%92%8CsessionStorage%E7%9A%84%E5%8C%BA%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="GuoYanHao">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="精卫衔微木，将以填沧海">
     </span>
 
     
@@ -247,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">guoyanhao</h1>
+          <h1 class="post-title" itemprop="name headline">localStorage和sessionStorage的区别</h1>
         
 
         <div class="post-meta">
@@ -259,8 +283,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-30T21:48:16+08:00">
-                2020-03-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-29T10:04:01+08:00">
+                2019-12-29
               </time>
             
 
@@ -297,7 +321,14 @@
       
 
       
-        
+        <h3 id="概念及特性"><a href="#概念及特性" class="headerlink" title="概念及特性"></a>概念及特性</h3><p>localStorage和sessionStorage都是只有现代浏览器支持的HTML5标准的本地存储接口。主要用于键值对形式的数据存储在浏览器中，是客户端持久存储的解决方案。</p>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>sessionStorage特性与服务端的session类似，表示会话。sessionStoarge只是将数据存储在本次会话中，关闭页面后数据将丢失。<br>localStorage则是用户没有主动调用api删除，则会一直保存在浏览器中。</p>
+<p><strong>localStorage、sessionStorage一般存储大小5M。</strong></p>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><a id="more"></a>
+
+
+<p>localStorage适合使用在需要长期保存的数据中，比如购物车、html5开发的游戏的数据存储、token等<br>sessionStorage适合使用在只在当前页面的会话有效的数据，比如表单项过多，用户可以分批填写，将数据缓存在sessionStorage中，以提升用户体验。</p>
+
       
     </div>
     
@@ -312,6 +343,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/web%E5%89%8D%E7%AB%AF/" rel="tag"># web前端</a>
+          
+            <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag"># 浏览器</a>
+          
+        </div>
+      
 
       
       
@@ -321,18 +360,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/30/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/30/Test/" rel="prev" title="Test">
-                Test <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/02/%E9%97%AD%E5%8C%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" rel="prev" title="闭包及使用场景">
+                闭包及使用场景 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -385,13 +420,22 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-author-name" itemprop="name">GuoYanHao</p>
+              <p class="site-description motion-element" itemprop="description">一位努力的Web前端开发者</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -399,33 +443,24 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives" title="/archives%7C%7C%20archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
             
-              
-              
-              <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
-                
-              </div>
-            
 
             
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
@@ -447,6 +482,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念及特性"><span class="nav-number">1.</span> <span class="nav-text">概念及特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区别"><span class="nav-number">2.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">3.</span> <span class="nav-text">使用场景</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -464,7 +515,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">GuoYanHao</span>
 
   
 </div>
