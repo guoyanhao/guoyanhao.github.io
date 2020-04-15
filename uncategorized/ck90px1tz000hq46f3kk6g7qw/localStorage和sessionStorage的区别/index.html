@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Javascript,js," />
+  <meta name="keywords" content="web前端,浏览器," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="什么是闭包闭包是指有权访问另一个函数作用域中变量的函数。当函数被调用时，会创建一个执行环境和作用域链。然后，结合arguments和其他命名参数的值初始化函数的活动对象（activation object），但是在作用域链中，外部函数的活动对象始终处于第二位。">
+<meta name="description" content="概念及特性localStorage和sessionStorage都是只有现代浏览器支持的HTML5标准的本地存储接口。主要用于键值对形式的数据存储在浏览器中，是客户端持久存储的解决方案。 区别sessionStorage特性与服务端的session类似，表示会话。sessionStoarge只是将数据存储在本次会话中，关闭页面后数据将丢失。localStorage则是用户没有主动调用api删除，则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闭包及使用场景">
-<meta property="og:url" content="http://guoyanhao.github.io/2020/01/02/%E9%97%AD%E5%8C%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/index.html">
+<meta property="og:title" content="localStorage和sessionStorage的区别">
+<meta property="og:url" content="http://guoyanhao.github.io/uncategorized/ck90px1tz000hq46f3kk6g7qw/localStorage%E5%92%8CsessionStorage%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
 <meta property="og:site_name" content="精卫衔微木，将以填沧海">
-<meta property="og:description" content="什么是闭包闭包是指有权访问另一个函数作用域中变量的函数。当函数被调用时，会创建一个执行环境和作用域链。然后，结合arguments和其他命名参数的值初始化函数的活动对象（activation object），但是在作用域链中，外部函数的活动对象始终处于第二位。">
+<meta property="og:description" content="概念及特性localStorage和sessionStorage都是只有现代浏览器支持的HTML5标准的本地存储接口。主要用于键值对形式的数据存储在浏览器中，是客户端持久存储的解决方案。 区别sessionStorage特性与服务端的session类似，表示会话。sessionStoarge只是将数据存储在本次会话中，关闭页面后数据将丢失。localStorage则是用户没有主动调用api删除，则">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-02T08:48:08.000Z">
-<meta property="article:modified_time" content="2020-04-03T02:01:55.925Z">
+<meta property="article:published_time" content="2019-12-29T02:04:01.000Z">
+<meta property="article:modified_time" content="2020-04-03T03:13:06.703Z">
 <meta property="article:author" content="GuoYanHao">
-<meta property="article:tag" content="Javascript">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="web前端">
+<meta property="article:tag" content="浏览器">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://guoyanhao.github.io/2020/01/02/闭包及使用场景/"/>
+  <link rel="canonical" href="http://guoyanhao.github.io/uncategorized/ck90px1tz000hq46f3kk6g7qw/localStorage和sessionStorage的区别/"/>
 
 
 
 
 
-  <title>闭包及使用场景 | 精卫衔微木，将以填沧海</title>
+  <title>localStorage和sessionStorage的区别 | 精卫衔微木，将以填沧海</title>
   
 
 
@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://guoyanhao.github.io/2020/01/02/%E9%97%AD%E5%8C%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">
+    <link itemprop="mainEntityOfPage" href="http://guoyanhao.github.io/uncategorized/ck90px1tz000hq46f3kk6g7qw/localStorage%E5%92%8CsessionStorage%E7%9A%84%E5%8C%BA%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GuoYanHao">
@@ -271,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">闭包及使用场景</h1>
+          <h1 class="post-title" itemprop="name headline">localStorage和sessionStorage的区别</h1>
         
 
         <div class="post-meta">
@@ -283,8 +283,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-02T16:48:08+08:00">
-                2020-01-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-29T10:04:01+08:00">
+                2019-12-29
               </time>
             
 
@@ -321,10 +321,13 @@
       
 
       
-        <h3 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h3><p><strong>闭包</strong>是指有权访问另一个函数作用域中变量的函数。<br>当函数被调用时，会创建一个执行环境和作用域链。然后，结合arguments和其他命名参数的值初始化函数的活动对象（activation object），但是在作用域链中，外部函数的活动对象始终处于第二位。</p>
-<a id="more"></a>
+        <h3 id="概念及特性"><a href="#概念及特性" class="headerlink" title="概念及特性"></a>概念及特性</h3><p>localStorage和sessionStorage都是只有现代浏览器支持的HTML5标准的本地存储接口。主要用于键值对形式的数据存储在浏览器中，是客户端持久存储的解决方案。</p>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>sessionStorage特性与服务端的session类似，表示会话。sessionStoarge只是将数据存储在本次会话中，关闭页面后数据将丢失。<br>localStorage则是用户没有主动调用api删除，则会一直保存在浏览器中。</p>
+<p><strong>localStorage、sessionStorage一般存储大小5M。</strong></p>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><a id="more"></a>
 
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p><strong>函数作为返回值</strong><br>作为返回值时，为返回的函数创建一个新的词法环境。可以为其封装私有变量、保存数据等。</p>
+
+<p>localStorage适合使用在需要长期保存的数据中，比如购物车、html5开发的游戏的数据存储、token等<br>sessionStorage适合使用在只在当前页面的会话有效的数据，比如表单项过多，用户可以分批填写，将数据缓存在sessionStorage中，以提升用户体验。</p>
 
       
     </div>
@@ -342,9 +345,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+            <a href="/tags/web%E5%89%8D%E7%AB%AF/" rel="tag"># web前端</a>
           
-            <a href="/tags/js/" rel="tag"># js</a>
+            <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag"># 浏览器</a>
           
         </div>
       
@@ -357,18 +360,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/29/localStorage%E5%92%8CsessionStorage%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="next" title="localStorage和sessionStorage的区别">
-                <i class="fa fa-chevron-left"></i> localStorage和sessionStorage的区别
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/09/%E5%BF%AB%E9%80%9F%E7%90%86%E8%A7%A3BFC/" rel="prev" title="快速理解BFC">
-                快速理解BFC <i class="fa fa-chevron-right"></i>
+              <a href="/uncategorized/ck90px1qi0002q46f27c79n64/%E9%97%AD%E5%8C%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" rel="prev" title="闭包及使用场景">
+                闭包及使用场景 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -492,7 +491,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是闭包"><span class="nav-number">1.</span> <span class="nav-text">什么是闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">2.</span> <span class="nav-text">使用场景</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念及特性"><span class="nav-number">1.</span> <span class="nav-text">概念及特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区别"><span class="nav-number">2.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">3.</span> <span class="nav-text">使用场景</span></a></li></ol></div>
             
 
           </div>
